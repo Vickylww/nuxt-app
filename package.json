@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@nuxt/image": "^2.0.0",
+    "axios": "^1.18.1",
+    "ipx": "^3.1.1",
+    "nuxt": "^3.16.0",
+    "swiper": "^14.0.6"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "cwebp-bin@6.1.2": true,
+    "gifsicle@5.2.0": true,
+    "jpegtran-bin@5.0.2": true,
+    "jpegtran-bin@6.0.1": true,
+    "mozjpeg@7.1.1": true,
+    "optipng-bin@7.0.1": true,
+    "pngquant-bin@6.0.1": true,
+    "esbuild@0.28.1": true
+  },
+  "devDependencies": {
+    "vite-plugin-imagemin": "^0.6.1"
+  }
+}
