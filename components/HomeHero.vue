@@ -1,35 +1,52 @@
 
 
 <template>
-  <div   class="carousel-container">
+  <section
+  class="carousel-container"
+  aria-roledescription="carousel"
+  aria-label="图片轮播"
+>
+    <div
+    role="group"
+    aria-roledescription="slide"
+    :aria-label="`第 ${currentIndex + 1} 张，共 ${totalSlides} 张`"
+  >
     <!-- 当前图 -->
     <NuxtImg
       :src="currentSrc"
       :key="'current-' + currentIndex"
+      :alt="currentAlt"
       class="carousel-image current"
       :class="{ 'fade-out': isSwitching }"
       width="100%"
-      height="auto"
+      height="700"
       loading="eager"
        quality="80" 
+       preload 
       format="webp"
     />
     <!-- 下一张图（预加载） -->
+    <div  v-if="nextSrc"
+    role="group"
+    aria-roledescription="slide"
+    aria-hidden="true">
     <NuxtImg
-      v-if="nextSrc"
       :src="nextSrc"
       :key="'next-' + nextIndex"
+      :alt="nextAlt"
       class="carousel-image next"
       :class="{ 'fade-in': isSwitching }"
       width="100%"
-      height="auto"
+      height="700"
       loading="eager"
+      preload 
        quality="80" 
       format="webp"
       @load="onNextImageLoaded"
     />
-   
+   </div>
   </div>
+  </section>
 </template>
 
 <script setup>
@@ -41,7 +58,9 @@ const props = defineProps({
 const currentIndex = ref(0)
 const nextIndex = computed(() => (currentIndex.value + 1) % props.images.length)
 const currentSrc = computed(() => props.images[currentIndex.value]?.src)
+const currentAlt = computed(() => props.images[currentIndex.value]?.alt)
 const nextSrc = computed(() => props.images[nextIndex.value]?.src)
+const nextAlt = computed(() => props.images[nextIndex.value]?.alt)
 
 const isSwitching = ref(false)
 let timer = null

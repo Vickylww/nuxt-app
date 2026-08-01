@@ -1,5 +1,9 @@
 <template>
   <!-- :pagination="{ clickable: true }" -->
+  <section class="image-carousel" aria-roledescription="carousel" aria-labelledby="carousel-heading">
+   <!-- 隐藏的标题，辅助技术可识别 -->
+  <h2 id="carousel-heading" class="sr-only">图片轮播</h2>
+
   <swiper
     :modules="[Navigation]"
     :navigation="true"
@@ -8,10 +12,18 @@
     :space-between="0"
     class="carousel"
   >
-    <swiper-slide v-for="(img, idx) in images" :key="idx">
-      <NuxtImg :src="img" :alt="'图片' + (idx + 1)" class="slide-img" format="webp"  loading="lazy"/>
+    <swiper-slide v-for="(img, idx) in images" :key="idx" >
+      <div    :aria-roledescription="'slide'"
+        :aria-label="`第 ${idx + 1} 张，共 ${images.length} 张`">
+      <NuxtImg :src="img" :alt="'图片' + (idx + 1)" class="slide-img" format="webp"  loading="lazy" width="1200" height="400"/>
+      </div>
     </swiper-slide>
   </swiper>
+    <!-- 动态通知区域：切换时自动播报当前幻灯片编号 -->
+  <div aria-live="polite" aria-atomic="true" class="sr-only">
+    {{ `当前显示第 ${activeIndex + 1} 张，共 ${images.length} 张` }}
+  </div>
+  </section>
 </template>
 
 <script setup>

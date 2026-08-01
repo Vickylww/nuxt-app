@@ -1,7 +1,6 @@
 <template>
-  <div class="page-container">
-    <div class="tasklist">
-    <div>看板任务列表</div>
+  <section class="page-container tasklist" aria-labelledby="task-list-heading">
+    <h1 id="task-list-heading">看板任务列表</h1>
     <ul>
       <li v-for="task in tasks" :key="task.id">
         <input
@@ -17,13 +16,15 @@
     </ul>
 
     <div class="input-group">
-      <label for="">任务名称</label>
-      <input v-model="newTaskTitle" type="请输入任务名称" name="newtasktitle" />
+      <label for="new-task">任务名称</label>
+      <input id="new-task" v-model="newTaskTitle" type="text"
+      placeholder="请输入任务名称"  @keyup.enter="addtask" />
       <button type="" @click="addtask()">添加</button>
     </div>
-    共{{ stats.total }} 项任务，{{ stats.completed }}项未完成
-  </div>
-  </div>
+     <p role="status" aria-live="polite">
+    共 {{ stats.total }} 项任务，{{ stats.completed }} 项未完成
+  </p>
+  </section>
 </template>
 
 <script setup>

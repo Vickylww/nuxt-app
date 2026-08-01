@@ -1,15 +1,15 @@
 <template>
-  <div class="page-container">
-    <h1>广告制作</h1>
-    <p class="subtitle">创意视觉，精准传达</p>
-    <div class="service-grid">
-      <div v-for="service in services" :key="service.id" class="service-card">
-        <div class="card-icon">{{ service.icon }}</div>
+  <section class="page-container" aria-labelledby="pd-title">
+    <h1 id="pd-title">广告制作</h1>
+    <p class="subtitle" >创意视觉，精准传达</p>
+    <ul class="service-grid">
+      <li v-for="service in services" :key="service.id" class="service-card">
+        <span class="card-icon" aria-hidden="true">{{ service.icon }}</span>
         <h3>{{ service.title }}</h3>
         <p>{{ service.desc }}</p>
-      </div>
-    </div>
-  </div>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script setup>

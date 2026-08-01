@@ -3,7 +3,7 @@
     <h2 class="section-title">热门推荐</h2>
     <div class="container">
       <div v-for="item in items" :key="item.id" class="article-card">
-        <NuxtImg :src="item.img" :alt="item.title" class="card-img"  format="webp"  loading="lazy"/>
+        <NuxtImg :src="item.img" :alt="item.desc" class="card-img"  format="webp"  loading="lazy" width="347" height="200"/>
         <div class="card-body">
           <h3>{{ item.title }}</h3>
           <p class="desc">{{ item.desc }}</p>

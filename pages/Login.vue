@@ -1,32 +1,43 @@
 <template>
-  <div class="form-container">
-    <h2>登录</h2>
-    <form @submit.prevent="handleLogin">
+<section class="form-container" aria-labelledby="login-heading">
+    <h2 id="login-heading">登录</h2>
+    <form @submit.prevent="handleLogin" novalidate>
       <div class="input-group">
-        <label>手机号</label>
+        <label for="phone-input">手机号</label>
         <input
+         id="phone-input"
           v-model="phone"
-          type="text"
+          type="tel"
+          inputmode="numeric"
+           autocomplete="tel"
           placeholder="请输入手机号"
           maxlength="11"
+          required
+          aria-required="true"
+          aria-describedby="phone-error"
           @blur="validatePhone"
         />
-        <span v-if="phoneError" class="error-msg">{{ phoneError }}</span>
+        <span id="phone-error" v-if="phoneError" class="error-msg"  role="alert">{{ phoneError }}</span>
       </div>
       <div class="input-group">
-        <label>密码</label>
+        <label for="password-input">密码</label>
         <input
+        id="password-input"
           v-model="password"
+           autocomplete="current-password"
           type="password"
           placeholder="请输入密码"
+          required
+        aria-required="true"
+        aria-describedby="password-error"
           @blur="validatePassword"
         />
-        <span v-if="passwordError" class="error-msg">{{ passwordError }}</span>
+        <span id="password-error" v-if="passwordError" class="error-msg"   role="alert">{{ passwordError }}</span>
       </div>
       <button type="submit" class="submit-btn">登录</button>
     </form>
     <p class="switch-link">还没有账号？<router-link to="/register">立即注册</router-link></p>
-  </div>
+  </section>
 </template>
 
 <script setup>

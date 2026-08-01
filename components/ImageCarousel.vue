@@ -1,30 +1,43 @@
 <template>
-  <div class="image-carousel">
+ <section class="image-carousel" aria-roledescription="carousel" aria-labelledby="carousel-heading">
+    <h2 id="carousel-heading" class="sr-only">图片轮播</h2>
     <div ref="viewport" class="carousel-viewport">
-      <div
+      <ul
         class="carousel-track"
         :style="{
           transform: `translateX(-${currentIndex * 100}%)`,
           transition: 'transform 0.5s ease'
         }"
       >
-        <div v-for="(img, idx) in images" :key="idx" class="carousel-slide">
-          <NuxtImg :src="img" :alt="'图片' + (idx + 1)" format="webp"  loading="lazy"/>
-        </div>
-      </div>
+        <li v-for="(img, idx) in images" :key="idx" class="carousel-slide"  role="group"
+        aria-roledescription="slide"
+        :aria-label="`第 ${idx + 1} 张，共 ${images.length} 张`"
+        :aria-hidden="idx !== currentIndex ? 'true' : undefined">
+          <NuxtImg :src="img.src" :alt="img.alt || `图片 ${idx + 1}`" format="webp"  loading="lazy"  width="1200" height="400"/>
+        </li>
+      </ul>
     </div>
-    <button class="carousel-arrow left" @click="prev">‹</button>
-    <button class="carousel-arrow right" @click="next">›</button>
+    <button class="carousel-arrow left" @click="prev" aria-label="上一张幻灯片">‹</button>
+    <button class="carousel-arrow right" @click="next" aria-label="下一张幻灯片">›</button>
     <!-- 可选：指示器 -->
-    <div v-if="images.length > 1" class="carousel-dots">
-      <span
+    <div v-if="images.length > 1" class="carousel-dots"  role="tablist" aria-label="幻灯片指示器">
+      <button
         v-for="(_, idx) in images"
         :key="idx"
+         role="tab"
+      :aria-selected="idx === currentIndex ? 'true' : 'false'"
+      :aria-label="`跳转到第 ${idx + 1} 张幻灯片`"
         :class="{ active: idx === currentIndex }"
         @click="goTo(idx)"
-      ></span>
+         @keydown.enter.prevent="goTo(idx)"
+      @keydown.space.prevent="goTo(idx)"
+      ></button>
     </div>
+     <!-- 动态通知内容变化 -->
+  <div aria-live="polite" aria-atomic="true" class="sr-only">
+    {{ `当前显示第 ${currentIndex + 1} 张，共 ${images.length} 张` }}
   </div>
+  </section>
 </template>
 
 <script setup>
@@ -34,9 +47,9 @@ const props = defineProps({
   images: {
     type: Array,
     default: () => [
-      '/assets/img.jpg',
-      '/assets/img1.jpg',
-      '/assets/img2.jpg'
+      { src: '/assets/img.jpg', alt: '首页横幅1' },
+  { src: '/assets/img1.jpg', alt: '远程图片' },
+  { src: '/assets/img2.jpg', alt: '首页横幅3' }
     ]
   }
 })

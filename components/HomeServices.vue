@@ -1,13 +1,16 @@
 <template>
-  <section class="services">
-    <div class="container">
+  <section class="services" aria-labelledby="services-heading">
+      <!-- 隐藏的区域标题，对屏幕阅读器可见，对视觉用户隐藏 -->
+      <h2 id="services-heading" class="sr-only">我们的服务</h2>
+  
+    <ul class="container">
       <div v-for="item in items" :key="item.id" class="service-card">
-        <div class="service-icon">{{ item.icon }}</div>
+        <div class="service-icon" aria-hidden="true">{{ item.icon }}</div>
         <h3>{{ item.title }}</h3>
         <p>{{ item.desc }}</p>
-        <span class="hover-line"></span>
+        <span class="hover-line" aria-hidden="true"></span>
       </div>
-    </div>
+    </ul>
   </section>
 </template>
 

@@ -4,6 +4,11 @@
   padding: 0 20px;
   color: #000;
 }
+.sr-only{display: none;}
+ul ,li {
+    list-style-type: none;
+    padding:0px;margin:0px;
+}
 body{margin:0px;padding:0px;}
 h1 {
   font-size: 36px;
@@ -88,7 +93,7 @@ a{text-decoration:none}
         }
 
         /* ========== 任务列表 ========== */
-        .page-container ul {
+        .tasklist ul {
             list-style: none;
             padding: 0;
             margin: 0 0 32px 0;
@@ -97,7 +102,7 @@ a{text-decoration:none}
             gap: 8px;
         }
 
-        .page-container ul li {
+        .tasklist ul li {
             display: flex;
             align-items: center;
             gap: 14px;
@@ -112,7 +117,7 @@ a{text-decoration:none}
             position: relative;
         }
 
-        .page-container ul li:hover {
+        .tasklist ul li:hover {
             background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 8px 24px rgba(0, 20, 40, 0.08);
             transform: translateY(-1px);
@@ -120,7 +125,7 @@ a{text-decoration:none}
         }
 
         /* ——— 自定义复选框 ——— */
-        .page-container ul li input[type="checkbox"] {
+        .tasklist ul li input[type="checkbox"] {
             appearance: none;
             -webkit-appearance: none;
             width: 22px;
@@ -139,18 +144,18 @@ a{text-decoration:none}
             flex-shrink: 0;
         }
 
-        .page-container ul li input[type="checkbox"]:hover {
+        .tasklist ul li input[type="checkbox"]:hover {
             border-color: #6c8cff;
             box-shadow: 0 0 0 4px rgba(108, 140, 255, 0.12);
         }
 
-        .page-container ul li input[type="checkbox"]:checked {
+        .tasklist ul li input[type="checkbox"]:checked {
             background: #6c8cff;
             border-color: #6c8cff;
             box-shadow: 0 0 0 4px rgba(108, 140, 255, 0.15);
         }
 
-        .page-container ul li input[type="checkbox"]:checked::after {
+        .tasklist ul li input[type="checkbox"]:checked::after {
             content: '✓';
             color: white;
             font-size: 16px;
@@ -165,7 +170,7 @@ a{text-decoration:none}
         }
 
         /* ——— 任务标题 ——— */
-        .page-container ul li label {
+        .tasklist ul li label {
             flex: 1;
             font-size: 16px;
             font-weight: 500;
@@ -178,7 +183,7 @@ a{text-decoration:none}
             line-height: 1.5;
         }
 
-        .page-container ul li label.taskline {
+        .tasklist ul li label.taskline {
             color: #94a3b8;
             text-decoration: line-through;
             text-decoration-color: #94a3b8;
@@ -186,14 +191,14 @@ a{text-decoration:none}
             opacity: 0.7;
         }
 
-        .page-container ul li label.taskline1 {
+        .tasklist ul li label.taskline1 {
             color: #1e293b;
             text-decoration: none;
             opacity: 1;
         }
 
         /* ——— 删除按钮 ——— */
-        .page-container ul li button {
+        .tasklist ul li button {
             background: transparent;
             border: none;
             color: #b9c4d4;
@@ -208,18 +213,18 @@ a{text-decoration:none}
             opacity: 0.4;
         }
 
-        .page-container ul li:hover button {
+        .tasklist ul li:hover button {
             opacity: 0.8;
         }
 
-        .page-container ul li button:hover {
+        .tasklist ul li button:hover {
             color: #ef4444;
             background: rgba(239, 68, 68, 0.08);
             opacity: 1 !important;
             transform: scale(1.05);
         }
 
-        .page-container ul li button:active {
+        .tasklist ul li button:active {
             transform: scale(0.92);
         }
 
@@ -389,7 +394,7 @@ a{text-decoration:none}
 
         /* ========== 响应式 ========== */
         @media (max-width: 600px) {
-            .page-container {
+            .tasklist {
                 padding: 24px 18px 28px;
                 border-radius: 24px;
             }
@@ -399,13 +404,13 @@ a{text-decoration:none}
                 margin-bottom: 20px;
             }
 
-            .page-container ul li {
+            .tasklist ul li {
                 padding: 12px 14px 12px 12px;
                 gap: 12px;
                 border-radius: 14px;
             }
 
-            .page-container ul li label {
+            .tasklist ul li label {
                 font-size: 15px;
             }
 
@@ -452,14 +457,14 @@ a{text-decoration:none}
                 min-width: 60px;
             }
 
-            .page-container ul li button {
+            .tasklist ul li button {
                 opacity: 0.6;
                 padding: 4px 8px;
             }
         }
 
         @media (max-width: 400px) {
-            .page-container {
+            .tasklist {
                 padding: 16px 12px 20px;
                 border-radius: 20px;
             }
@@ -468,66 +473,66 @@ a{text-decoration:none}
                 font-size: 19px;
             }
 
-            .page-container ul li {
+            .tasklist ul li {
                 padding: 10px 10px 10px 10px;
                 gap: 10px;
             }
 
-            .page-container ul li label {
+            .tasklist ul li label {
                 font-size: 14px;
             }
         }
 
         /* ========== 入场动画（可选） ========== */
-        .page-container ul li {
+        .tasklist ul li {
             animation: fadeSlideIn 0.3s ease forwards;
             opacity: 0;
             transform: translateY(8px);
         }
 
-        .page-container ul li:nth-child(1) {
+        .tasklist ul li:nth-child(1) {
             animation-delay: 0.02s;
         }
-        .page-container ul li:nth-child(2) {
+        .tasklist ul li:nth-child(2) {
             animation-delay: 0.04s;
         }
-        .page-container ul li:nth-child(3) {
+        .tasklist ul li:nth-child(3) {
             animation-delay: 0.06s;
         }
-        .page-container ul li:nth-child(4) {
+        .tasklist ul li:nth-child(4) {
             animation-delay: 0.08s;
         }
-        .page-container ul li:nth-child(5) {
+        .tasklist ul li:nth-child(5) {
             animation-delay: 0.10s;
         }
-        .page-container ul li:nth-child(6) {
+        .tasklist ul li:nth-child(6) {
             animation-delay: 0.12s;
         }
-        .page-container ul li:nth-child(7) {
+        .tasklist ul li:nth-child(7) {
             animation-delay: 0.14s;
         }
-        .page-container ul li:nth-child(8) {
+        .tasklist ul li:nth-child(8) {
             animation-delay: 0.16s;
         }
-        .page-container ul li:nth-child(9) {
+        .tasklist ul li:nth-child(9) {
             animation-delay: 0.18s;
         }
-        .page-container ul li:nth-child(10) {
+        .tasklist ul li:nth-child(10) {
             animation-delay: 0.20s;
         }
-        .page-container ul li:nth-child(11) {
+        .tasklist ul li:nth-child(11) {
             animation-delay: 0.22s;
         }
-        .page-container ul li:nth-child(12) {
+        .tasklist ul li:nth-child(12) {
             animation-delay: 0.24s;
         }
-        .page-container ul li:nth-child(13) {
+        .tasklist ul li:nth-child(13) {
             animation-delay: 0.26s;
         }
-        .page-container ul li:nth-child(14) {
+        .tasklist ul li:nth-child(14) {
             animation-delay: 0.28s;
         }
-        .page-container ul li:nth-child(15) {
+        .tasklist ul li:nth-child(15) {
             animation-delay: 0.30s;
         }
 

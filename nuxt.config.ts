@@ -5,7 +5,8 @@ export default defineNuxtConfig({
   modules: ['@nuxt/image'],
   app:{
     head:{
-      meta:[{ name: '企业官网', content: 'width=device-width, initial-scale=1' },]
+      meta:[{ content: 'width=device-width, initial-scale=1' }],
+      title:"企业官网"
     }
   },
   image: {
@@ -45,7 +46,10 @@ export default defineNuxtConfig({
    compatibilityDate: '2025-07-28',
   devtools: { enabled: true },
     ssr: true,
-     baseURL: '/nuxt-app/'
+     baseURL: '/nuxt-app/',
+     experimental: {
+  renderJsonPayloads: true
+}
   //  $env:NUXT_APP_BASE_URL="/nuxt-app/"; npx nuxt build --preset github_pages
      
 })

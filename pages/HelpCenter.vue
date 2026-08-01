@@ -1,24 +1,33 @@
 <template>
-    <div class="help-centerbox">
+    <section class="help-centerbox" aria-labelledby="title">
     <div class="help-center ">
       <div class="help-left">
-        <h2 class="left-title">{{ currentTab.title }}</h2>
-        <ul class="tree">
-          <li v-for="(item, idx) in currentList" :key="idx" class="tree-item">
-            <div class="level1" @click="toggleItem(idx)">
+        <h2 id="title" class="left-title">帮助中心</h2>
+        <ul class="tree" role="tree" aria-label="帮助分类">
+          <li v-for="(item, idx) in currentList" :key="idx" class="tree-item"  role="treeitem"
+          :aria-expanded="item.expanded ? 'true' : 'false'" >
+            <button class="level1" @click="toggleItem(idx)" :aria-expanded="item.expanded ? 'true' : 'false'">
               <span class="level1-text">{{ item.name }}</span>
-              <span class="arrow">{{ item.expanded ? '▲' : '▼' }}</span>
-            </div>
+              <span class="arrow" aria-hidden="true">{{ item.expanded ? '▲' : '▼' }}</span>
+            </button>
             <transition name="slide">
-              <ul v-if="item.expanded" class="level2-list">
+              <ul v-if="item.expanded" class="level2-list"  role="group"
+              :aria-label="`${item.name} 的子分类`">
                 <li
                   v-for="(child, cIdx) in item.children"
                   :key="cIdx"
                   class="level2-item"
                   :class="{ active: selectedChild?.name === child.name }"
+                  role="treeitem"
+                :aria-selected="selectedChild?.name === child.name ? 'true' : 'false'"
+                  @click="selectChild(child)"
+                >
+                  <button
+                  class="level2-btn"
                   @click="selectChild(child)"
                 >
                   {{ child.name }}
+                </button>
                 </li>
               </ul>
             </transition>
@@ -26,17 +35,19 @@
         </ul>
       </div>
       <div class="help-right">
-        <div class="tab-bar">
+        <div class="tab-bar" role="tablist" aria-label="详情标签切换">
           <button
             v-for="tab in tabs"
             :key="tab.key"
+             role="tab"
+          :aria-selected="currentTab.key === tab.key ? 'true' : 'false'"
             :class="{ active: currentTab.key === tab.key }"
             @click="switchTab(tab)"
           >
             {{ tab.title }}
           </button>
         </div>
-        <div class="content-area">
+        <div class="content-area" role="tabpanel" :aria-label="currentTab.title">
           <div v-if="selectedChild" class="detail-card">
             <h3>{{ selectedChild.name }}</h3>
             <p>{{ selectedChild.desc || '暂无详细描述' }}</p>
@@ -47,7 +58,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -225,6 +236,7 @@ const selectChild = (child) => {
   cursor: pointer;
   transition: background 0.3s;
 }
+.tree-item button{width:100%;border:none;background:#fff;text-align: left;}
 .level1:hover {
   background: #fff;
 }

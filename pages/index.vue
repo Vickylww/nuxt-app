@@ -1,11 +1,13 @@
 <template>
   <div class="home">
     <HomeHero :images="carouselImages" :interval="5000" /> 
-    <HomeServices />
-    <HomeNewsSlider />
-    <ImageCarousel />
-    <Swiper  />
-    <HomeArticles />
+    <LazySomeComponent >
+      <HomeServices />
+      <HomeNewsSlider />
+      <ImageCarousel />
+      <Swiper  />
+      <HomeArticles />
+    </LazySomeComponent>
   </div>
 </template>
 
@@ -15,6 +17,7 @@ const carouselImages = [
   { src: '/assets/banner.jpg', alt: '远程图片' },
   { src: '/assets/banner2.jpg', alt: '首页横幅3' }
 ]
+
 </script>
 
 <style scoped>
