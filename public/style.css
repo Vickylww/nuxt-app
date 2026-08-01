@@ -13,6 +13,7 @@ h1 {
   letter-spacing: 6px;
   text-align: center;
 }
+a{text-decoration:none}
 .news-list {
   display: flex;
   flex-direction: column;

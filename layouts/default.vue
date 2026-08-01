@@ -135,7 +135,6 @@ main .flex-grow{martin-top:60px;}
   color: #ffd700;
  
 }
-.nav-left a{text-decoration:none}
 
 .footer {
   width: 100%;
