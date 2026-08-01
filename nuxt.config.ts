@@ -45,6 +45,7 @@ export default defineNuxtConfig({
    compatibilityDate: '2025-07-28',
   devtools: { enabled: true },
     ssr: true,
-  //  NUXT_APP_BASE_URL=/<your-repo-name>/ npx nuxt build --preset github_pages
+     baseURL: '/nuxt-app/'
+  //  $env:NUXT_APP_BASE_URL="/nuxt-app/"; npx nuxt build --preset github_pages
      
 })
