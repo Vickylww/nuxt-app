@@ -133,8 +133,9 @@ main .flex-grow{martin-top:60px;}
 }
 .nav-item.active {
   color: #ffd700;
-  border-bottom: 2px solid #ffd700;
+ 
 }
+.nav-left a{text-decoration:none}
 
 .footer {
   width: 100%;
