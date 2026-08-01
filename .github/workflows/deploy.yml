@@ -15,7 +15,7 @@ jobs:
       - run: npm install
       - run: npx nuxt build --preset github_pages
         env:
-          NUXT_APP_BASE_URL: /<nuxt-app>/   # 👈 改成你的仓库名
+          NUXT_APP_BASE_URL: /nuxt-app/   # 👈 改成你的仓库名
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./.output/public
