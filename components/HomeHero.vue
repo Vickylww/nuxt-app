@@ -19,7 +19,7 @@
       class="carousel-image current"
       :class="{ 'fade-out': isSwitching }"
       width="100%"
-      height="700"
+      max-height="700"
       loading="eager"
        quality="80" 
        preload 
@@ -37,7 +37,7 @@
       class="carousel-image next"
       :class="{ 'fade-in': isSwitching }"
       width="100%"
-      height="700"
+      max-height="700"
       loading="eager"
       preload 
        quality="80" 

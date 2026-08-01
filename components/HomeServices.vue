@@ -26,17 +26,26 @@ const items = [
 .services {
   background-color: #ffffff;
   padding: 80px 0;
+  container-type: inline-size;
 }
 .container {
-  max-width: 1100px;
+ 
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+   gap: var(--service-card-gap);
   justify-content: space-between;
-  gap: 40px;
   padding: 0 20px;
 }
+   @container (min-width: 800px) {
+      .container {
+          flex-direction: row;
+          flex-wrap: nowrap;
+      }
+  }
 .service-card {
-  flex: 1;
+  flex-direction: column;
+    flex: 1 1 0%;
   text-align: center;
   padding: 40px 20px;
   background: #ffffff;
@@ -44,6 +53,11 @@ const items = [
   cursor: pointer;
   transition: box-shadow 0.3s;
 }
+  @container (max-width: 799px) {
+          .service-card {
+              flex: 1 1 auto;
+          }
+      }
 .service-card:hover {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
 }

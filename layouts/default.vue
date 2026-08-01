@@ -1,16 +1,16 @@
 <template>
   <nav class="navbar" :style="{ backgroundColor: `rgba(255, 0, 0, ${alpha})` }">
-    <div class="nav-left">
+    <span class="nav-left">
       <router-link to="/" class="nav-item" active-class="active">首页</router-link>
       <router-link to="/news" class="nav-item" active-class="active">动态</router-link>
       <router-link to="/adproduction" class="nav-item" active-class="active">广告制作</router-link>
       <router-link to="/tasklist" class="nav-item" active-class="active">任务看板</router-link>
       <router-link to="/helpcenter" class="nav-item" active-class="active">帮助中心</router-link>
-    </div>
-    <div class="nav-right">
+    </span>
+    <span class="nav-right">
       <router-link to="/login" class="nav-item" active-class="active">登录</router-link>
       <router-link to="/register" class="nav-item" active-class="active">注册</router-link>
-    </div>
+    </span>
   </nav>
       <main class="flex-grow">
       <slot />
@@ -98,32 +98,35 @@ const items = reactive([
 </script>
 
 <style scoped>
-main .flex-grow{martin-top:60px;}
+main .flex-grow{margin-top:60px;}
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   height: 60px;
+  width:100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction:row;
   align-items: center;
+  justify-content: space-between;
   padding: 0;
   z-index: 1000;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-.navbar a{padding:0 20px;}
-.nav-left{margin-left:20px;}
-.nav-right{margin-right:20px;}
+ .navbar a{padding:0 20px;}
+.nav-left{flex: 1 1 72%;}
+.nav-right{flex: 1 1 28%; text-align: right;}
+
 .nav-item {
   font-size: 16px;
   color: #ffffff;
-  padding: 5px 0;
+  padding: 5px 0; flex-wrap: nowrap;
   transition:
     color 0.3s,
     border-bottom 0.3s;
+    flex-wrap: nowrap;
   border-bottom: 2px solid transparent;
   cursor: pointer;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);

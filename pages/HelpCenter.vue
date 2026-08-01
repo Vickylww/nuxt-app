@@ -207,10 +207,22 @@ const selectChild = (child) => {
 }
 .help-left {
   width: 280px;
-  padding: 30px 20px;
+  padding: 30px 0 0px 0;
   border-right: 1px solid #222;
   color: #e0e0e0;
+ 
 }
+  @media (min-width:1200px) {
+   
+     .help-left{padding-left:0px;}
+   }
+     @media (min-width:500px) {
+   
+     .help-left{padding-left:20px;padding-right:20px;}
+   }
+      @media (min-width:768px) {
+    .help-left{padding-left:20px;padding-right:20px;}
+   }
 .left-title {
   font-size: 20px;
   color: #c5a47e;

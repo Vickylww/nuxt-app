@@ -81,12 +81,13 @@ const next = () => {
   display: flex;
   background-color: #c0392b; /* 红色背景平铺 */
   min-height: 500px;
+  margin:0px;padding:0px;
 }
 
 /* 左侧固定宽度内容块 */
 .news-left-wrapper {
-  margin-left: 15%;
-  width: 451px;
+ width:100%;
+ 
   flex-shrink: 0;
   background-color: #ffffff;
   padding: 40px 20px;
@@ -96,6 +97,17 @@ const next = () => {
   justify-content: center;
 }
 
+     @media (min-width:1200px) {
+   
+     .news-left-wrapper{width:251px; margin-left:0px;}
+   }
+     @media (min-width:500px) {
+   
+     .news-left-wrapper{width:451px; margin-left:0px;}
+   }
+      @media (min-width:768px) {
+    .news-left-wrapper{width:451px;margin-left:15%;}
+   }
 /* 右侧空白 */
 .news-right-empty {
   flex: 1;
