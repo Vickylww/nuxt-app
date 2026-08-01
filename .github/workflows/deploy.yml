@@ -1,5 +1,5 @@
 
-name: npx nuxt build --preset github_pages
+name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
