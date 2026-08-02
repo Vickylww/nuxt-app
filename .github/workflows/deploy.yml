@@ -18,7 +18,7 @@ jobs:
           NUXT_APP_BASE_URL: /nuxt-app/   # 👈 改成你的仓库名
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output
+          path: ./.output/public
   deploy:
     needs: build
     permissions:
