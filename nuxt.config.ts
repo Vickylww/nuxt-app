@@ -22,6 +22,12 @@ export default defineNuxtConfig({
      // 可选：让生成的图片放在 .output/public 下
     // staticFilename: '[publicPath]/_img/[hash][ext]'
   },
+   // 开启静态图片预生成
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true
+  //   }
+  // },
    vite: {
      css: {
       transformer: 'lightningcss'  // 默认，极速 CSS 压缩
