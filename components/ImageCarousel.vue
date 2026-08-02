@@ -9,7 +9,7 @@
           transition: 'transform 0.5s ease'
         }"
       >
-        <li v-for="(img, idx) in images" :key="idx" class="carousel-slide"  role="group"
+        <li v-for="(img, idx) in images" :key="idx" class="carousel-slide"  role="Carousel"
         aria-roledescription="slide"
         :aria-label="`第 ${idx + 1} 张，共 ${images.length} 张`"
         :aria-hidden="idx !== currentIndex ? 'true' : undefined">
@@ -125,7 +125,7 @@ const goTo = (idx) => {
   gap: 8px;
   margin-top: 15px;
 }
-.carousel-dots span {
+.carousel-dots button {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -133,7 +133,7 @@ const goTo = (idx) => {
   cursor: pointer;
   transition: background 0.3s;
 }
-.carousel-dots span.active {
+.carousel-dots button.active {
   background: #c0392b;
 }
 </style>

@@ -6,7 +6,10 @@ export default defineNuxtConfig({
   app:{
     head:{
       meta:[{ content: 'width=device-width, initial-scale=1' }],
-      title:"企业官网"
+      title:"企业官网",
+       htmlAttrs: {
+        lang: 'zh-CN'
+      }
     }
   },
   image: {

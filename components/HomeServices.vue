@@ -4,12 +4,12 @@
       <h2 id="services-heading" class="sr-only">我们的服务</h2>
   
     <ul class="container">
-      <div v-for="item in items" :key="item.id" class="service-card">
-        <div class="service-icon" aria-hidden="true">{{ item.icon }}</div>
+      <li v-for="item in items" :key="item.id" class="service-card">
+        <span class="service-icon" aria-hidden="true">{{ item.icon }}</span>
         <h3>{{ item.title }}</h3>
         <p>{{ item.desc }}</p>
         <span class="hover-line" aria-hidden="true"></span>
-      </div>
+      </li>
     </ul>
   </section>
 </template>

@@ -116,10 +116,12 @@ main .flex-grow{margin-top:60px;}
 }
 
  .navbar a{padding:0 20px;}
-.nav-left{flex: 1 1 72%;}
-.nav-right{flex: 1 1 28%; text-align: right;}
+.nav-left{flex: 1 1 72%;display:flex;}
+.nav-right{flex: 1 1 28%; text-align: right; display:flex;}
+
 
 .nav-item {
+  flex:1;
   font-size: 16px;
   color: #ffffff;
   padding: 5px 0; flex-wrap: nowrap;

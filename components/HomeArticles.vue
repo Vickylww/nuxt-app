@@ -48,6 +48,7 @@ const items = [
   container-type: inline-size;
 }
 .section-title {
+  font-weight:600;
   text-align: center;
   font-size: 32px;
   color: #c5a47e;
@@ -74,10 +75,10 @@ const items = [
 .article-card {
   flex-direction: column;
     flex: 1 1 0%;
-  background: #ffffff;
+  background: #eee;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 15px #aaa;
   transition:
     transform 0.3s,
     box-shadow 0.3s;
@@ -90,7 +91,7 @@ const items = [
       }
 .article-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px #aaa;
 }
 .card-img {
   width: 100%;
@@ -112,7 +113,7 @@ const items = [
   margin-bottom: 15px;
 }
 .date {
-  color: #c5a47e;
+  color: #C5A40A;
   font-size: 13px;
 }
 </style>
