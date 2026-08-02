@@ -8,5 +8,5 @@
   </NuxtLayout>
 </template>
 <style>
-@import '~/public/style.css';
+@import '~/assets/css/style.css';
 </style>

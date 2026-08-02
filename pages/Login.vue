@@ -43,7 +43,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { login } from '~/api/user'
+import { login } from '~/utils/user'
 
 const handleLogin1 = async () => {
   try {

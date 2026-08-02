@@ -20,6 +20,10 @@ export default defineNuxtConfig({
     // staticFilename: '[publicPath]/_img/[hash][ext]'
   },
    vite: {
+     css: {
+      transformer: 'lightningcss'  // 默认，极速 CSS 压缩
+      // transformer: 'postcss'    // 改用 postcss
+    },
     //  resolve: {
     //   alias: { '@': '/<sourceDir>' }
     // },
