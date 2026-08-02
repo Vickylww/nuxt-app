@@ -23,11 +23,22 @@ export default defineNuxtConfig({
     // staticFilename: '[publicPath]/_img/[hash][ext]'
   },
    // 开启静态图片预生成
-  // nitro: {
-  //   prerender: {
-  //     crawlLinks: true
-  //   }
-  // },
+  nitro: {
+    prerender: {
+      routes: [
+        '/nuxt-app/_ipx/f_webp&q_80/assets/banner.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80/assets/banner2.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80/assets/3.jpeg',
+        '/nuxt-app/_ipx/f_webp&q_80/assets/img.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80/assets/img1.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80/assets/img2.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80/assets/photo.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80/assets/photo1.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80/assets/photo2.jpg',
+        // ...其他图片
+      ]
+    }
+  },
    vite: {
      css: {
       transformer: 'lightningcss'  // 默认，极速 CSS 压缩
