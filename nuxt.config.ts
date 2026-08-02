@@ -52,7 +52,7 @@ export default defineNuxtConfig({
   },
    compatibilityDate: '2025-07-28',
   devtools: { enabled: true },
-    ssr: true,
+    ssr: false,
      baseURL: '/nuxt-app/',
      experimental: {
   renderJsonPayloads: true
