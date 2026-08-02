@@ -48,12 +48,11 @@ const items = [
   container-type: inline-size;
 }
 .section-title {
-  font-weight:600;
   text-align: center;
   font-size: 32px;
   color: #c5a47e;
   margin-bottom: 50px;
-  font-weight: 300;
+  font-weight: 600;
   letter-spacing: 4px;
 }
 .container {
