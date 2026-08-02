@@ -47,21 +47,21 @@ const currentIndex = ref(0)
 const news = [
   {
     id: 1,
-    img: '/assets/photo.jpg',
+    img: usePublicUrl('/assets/photo.jpg'),
     title: '企业荣获创新大奖',
     desc: '在近日举行的行业峰会上，我司凭借出色的技术实力荣获年度创新企业称号。',
     date: '2026-05-20'
   },
   {
     id: 2,
-    img: '/assets/photo1.jpg',
+    img: usePublicUrl('/assets/photo1.jpg'),
     title: '新产品发布会圆满成功',
     desc: '新一代智能解决方案正式发布，吸引了众多客户和媒体的关注。',
     date: '2026-04-10'
   },
   {
     id: 3,
-    img: '/assets/photo2.jpg',
+    img: usePublicUrl('/assets/photo2.jpg'),
     title: '战略合作拓展国际市场',
     desc: '与多家知名企业达成合作，共同推动数字化转型。',
     date: '2026-03-05'

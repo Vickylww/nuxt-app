@@ -15,25 +15,27 @@
 </template>
 
 <script setup>
+import { usePublicUrl } from '../composables/usePublicUrl';
+
 
 const items = [
   {
     id: 1,
-    img: '/assets/img.jpg',
+    img: usePublicUrl('/assets/img.jpg'),
     title: '数字化转型之路',
     desc: '如何利用新技术实现企业全面升级',
     date: '2026-06-15'
   },
   {
     id: 2,
-    img: '/assets/img1.jpg',
+    img: usePublicUrl('/assets/img1.jpg'),
     title: '品牌营销新趋势',
     desc: '2026年不可忽视的五大营销策略',
     date: '2026-06-10'
   },
   {
     id: 3,
-    img: '/assets/img2.jpg',
+    img: usePublicUrl('/assets/img2.jpg'),
     title: '广告创意实战分享',
     desc: '从洞察到执行的全程复盘',
     date: '2026-06-05'
