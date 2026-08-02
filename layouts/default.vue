@@ -116,19 +116,31 @@ main .flex-grow{margin-top:60px;}
 }
 
  .navbar a{padding:0 20px;}
-.nav-left{flex: 1 1 72%;display:flex;}
-.nav-right{flex: 1 1 28%; text-align: right; display:flex;}
+.nav-left{flex: 1 1 72%;display:flex;justify-content: left;flex-wrap:wrap;}
+.nav-right{flex: 1 1 28%; justify-content: right; display:flex;flex-wrap:wrap;}
 
-
+     @media (min-width:1200px) {
+   
+     .nav-left a:first-child{margin-left:20px;}
+    .nav-right a:last-child{margin-right:20px;} 
+   }
+     @media (min-width:500px) {
+   
+    .nav-left a:first-child{margin-left:0px;}
+.nav-right a:last-child{margin-right:0px;}
+   }
+      @media (min-width:768px) {
+    .nav-left a:first-child{margin-left:20px;}
+.nav-right a:last-child{margin-right:20px;}
+   }
 .nav-item {
-  flex:1;
+ 
   font-size: 16px;
   color: #ffffff;
-  padding: 5px 0; flex-wrap: nowrap;
+  padding: 5px 0; 
   transition:
     color 0.3s,
     border-bottom 0.3s;
-    flex-wrap: nowrap;
   border-bottom: 2px solid transparent;
   cursor: pointer;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
