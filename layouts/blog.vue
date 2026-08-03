@@ -8,16 +8,8 @@
     </header>
 
     <!-- 主体内容区域，通过 slot 插入页面组件 -->
-    <main class="blog-main">
-      <div class="blog-content">
+    <main >
         <slot />
-      </div>
-      <!-- 可选侧边栏 -->
-      <aside class="blog-sidebar">
-        <h3>最新文章</h3>
-        <!-- 这里可以放文章列表组件 -->
-         <blog/>
-      </aside>
     </main>
 
     <!-- 博客专属页脚 -->
@@ -49,17 +41,7 @@
   text-decoration: none;
   color: #333;
 }
-.blog-main {
-  display: flex;
-  gap: 40px;
-  margin-top: 30px;
-}
-.blog-content {
-  flex: 1;
-}
-.blog-sidebar {
-  width: 250px;
-}
+
 .blog-footer {
   margin-top: 40px;
   padding: 20px 0;

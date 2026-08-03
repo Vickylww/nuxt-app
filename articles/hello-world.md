@@ -1,5 +1,5 @@
 ---
-title: "你好，世界！"
+title: "hello-world"
 description: "这是第一篇测试文章，用于验证博客系统集成。"
 createdAt: "2025-06-01"
 ---

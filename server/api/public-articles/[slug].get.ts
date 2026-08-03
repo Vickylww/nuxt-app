@@ -12,7 +12,7 @@ export default defineEventHandler((event) => {
   }
 
   // 使用 process.cwd() 确保路径正确
-  const filePath = path.resolve(process.cwd(), 'pages/articles', `${slug}.md`)
+  const filePath = path.resolve(process.cwd(), 'articles', `${slug}.md`)
   // 临时调试输出
   console.log('尝试读取文件:', filePath)
   // 检查文件是否存在

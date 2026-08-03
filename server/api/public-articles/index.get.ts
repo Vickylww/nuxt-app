@@ -4,7 +4,7 @@ import path from 'path'
 import matter from 'gray-matter'
 
 export default defineEventHandler(() => {
-  const articlesDir = path.resolve(process.cwd(), 'pages/articles')
+  const articlesDir = path.resolve(process.cwd(), 'articles')
 
   // 如果文件夹不存在，返回空数组
   if (!fs.existsSync(articlesDir)) {
