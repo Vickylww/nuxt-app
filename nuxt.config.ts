@@ -29,12 +29,12 @@ export default defineNuxtConfig({
         '/nuxt-app/_ipx/f_webp&q_80/assets/banner.jpg',
         '/nuxt-app/_ipx/f_webp&q_80/assets/banner2.jpg',
         '/nuxt-app/_ipx/f_webp&q_80/assets/3.jpeg',
-        '/nuxt-app/_ipx/f_webp&q_80/assets/img.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80/assets/img1.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80/assets/img2.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80/assets/photo.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80/assets/photo1.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80/assets/photo2.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80&s_1200x400/assets/img.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80&s_1200x400/assets/img1.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80&s_1200x400/assets/img2.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80&s_421x180/assets/photo.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80&s_421x180//assets/photo1.jpg',
+        '/nuxt-app/_ipx/f_webp&q_80&s_421x180//assets/photo2.jpg',
         // ...其他图片
       ]
     }
@@ -79,6 +79,7 @@ export default defineNuxtConfig({
     '/articles/**': { 
       swr: 3600,   // 仅针对博客文章启用 SWR 缓存
     },
+    '/_ipx/**': { prerender: true },
     // 其他路由如 '/'、'/about' 可以保持默认 SSR 或另行配置
   
   //  $env:NUXT_APP_BASE_URL="/nuxt-app/"; npx nuxt build --preset github_pages
