@@ -39,6 +39,7 @@ export default defineNuxtConfig({
       ]
     }
   },
+  
    vite: {
      css: {
       transformer: 'lightningcss'  // 默认，极速 CSS 压缩
@@ -73,7 +74,13 @@ export default defineNuxtConfig({
      baseURL: '/nuxt-app/',
      experimental: {
   renderJsonPayloads: true
-}
+},
+ routeRules: {
+    '/articles/**': { 
+      swr: 3600,   // 仅针对博客文章启用 SWR 缓存
+    },
+    // 其他路由如 '/'、'/about' 可以保持默认 SSR 或另行配置
+  
   //  $env:NUXT_APP_BASE_URL="/nuxt-app/"; npx nuxt build --preset github_pages
-     
+  } 
 })

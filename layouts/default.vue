@@ -1,15 +1,16 @@
 <template>
   <nav class="navbar" :style="{ backgroundColor: `rgba(255, 0, 0, ${alpha})` }">
     <span class="nav-left">
-      <router-link to="/" class="nav-item" active-class="active">首页</router-link>
-      <router-link to="/news" class="nav-item" active-class="active">动态</router-link>
-      <router-link to="/adproduction" class="nav-item" active-class="active">广告制作</router-link>
-      <router-link to="/tasklist" class="nav-item" active-class="active">任务看板</router-link>
-      <router-link to="/helpcenter" class="nav-item" active-class="active">帮助中心</router-link>
+      <NuxtLink  to="/" class="nav-item" active-class="active">首页</NuxtLink >
+      <NuxtLink  to="/news" class="nav-item" active-class="active">动态</NuxtLink >
+      <NuxtLink  to="/adproduction" class="nav-item" active-class="active">广告制作</NuxtLink >
+      <NuxtLink  to="/tasklist" class="nav-item" active-class="active">任务看板</NuxtLink >
+      <NuxtLink  to="/blog/hello-world" class="nav-item" active-class="active" exact-active-class="active">博客</NuxtLink >
+      <NuxtLink  to="/helpcenter" class="nav-item" active-class="active">帮助中心</NuxtLink >
     </span>
     <span class="nav-right">
-      <router-link to="/login" class="nav-item" active-class="active">登录</router-link>
-      <router-link to="/register" class="nav-item" active-class="active">注册</router-link>
+      <NuxtLink  to="/login" class="nav-item" active-class="active">登录</NuxtLink >
+      <NuxtLink  to="/register" class="nav-item" active-class="active">注册</NuxtLink >
     </span>
   </nav>
       <main class="flex-grow">
