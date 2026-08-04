@@ -25,21 +25,8 @@ export default defineNuxtConfig({
    // 开启静态图片预生成
   nitro: {
     prerender: {
-      routes: [
-        '/_ipx/f_webp&q_80/assets/banner.jpg',
-        '/_ipx/f_webp&q_80/assets/banner2.jpg',
-        '/_ipx/f_webp&q_80/assets/3.jpeg',
-        '/_ipx/f_webp&q_80&s_1200x400/assets/img.jpg',
-        '/_ipx/f_webp&q_80&s_1200x400/assets/img1.jpg',
-        '/_ipx/f_webp&q_80&s_1200x400/assets/img2.jpg',
-        '/_ipx/f_webp&q_80&s_421x180/assets/photo.jpg',
-        '/_ipx/f_webp&q_80&s_421x180/assets/photo1.jpg',
-        '/_ipx/f_webp&q_80&s_421x180/assets/photo2.jpg',
-        '/_ipx/f_webp&q_80&s_347x200/assets/img.jpg',
-        '/_ipx/f_webp&q_80&s_347x200/assets/img1.jpg',
-        '/_ipx/f_webp&q_80&s_347x200/assets/img2.jpg'
-        
-      ]
+      crawlLinks: true,  // 自动爬取页面里出现的所有链接，包括图片
+    routes: ['/']      // 从首页开始爬
     }
   },
   
