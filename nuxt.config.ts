@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import viteImagemin from 'vite-plugin-imagemin'
+// import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineNuxtConfig({
   modules: ['@nuxt/image'],
@@ -33,9 +33,9 @@ export default defineNuxtConfig({
         '/_ipx/f_webp&q_80&s_1200x400/assets/img1.jpg',
         '/_ipx/f_webp&q_80&s_1200x400/assets/img2.jpg',
         '/_ipx/f_webp&q_80&s_421x180/assets/photo.jpg',
-        '/_ipx/f_webp&q_80&s_421x180//assets/photo1.jpg',
-        '/_ipx/f_webp&q_80&s_421x180//assets/photo2.jpg',
-        // ...其他图片
+        '/_ipx/f_webp&q_80&s_421x180/assets/photo1.jpg',
+        '/_ipx/f_webp&q_80&s_421x180/assets/photo2.jpg'
+        
       ]
     }
   },
@@ -71,17 +71,13 @@ export default defineNuxtConfig({
    compatibilityDate: '2025-07-28',
   devtools: { enabled: true },
     ssr: true,
-    //  baseURL: '/nuxt-app/',
      experimental: {
   renderJsonPayloads: true
 },
  routeRules: {
     '/articles/**': { 
       swr: 3600,   // 仅针对博客文章启用 SWR 缓存
-    },
-    '/_ipx/**': { prerender: true },
-    // 其他路由如 '/'、'/about' 可以保持默认 SSR 或另行配置
+    }
   
-  //  $env:NUXT_APP_BASE_URL="/nuxt-app/"; npx nuxt build --preset github_pages
   } 
 })
