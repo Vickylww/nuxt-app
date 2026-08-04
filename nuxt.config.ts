@@ -26,15 +26,15 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/nuxt-app/_ipx/f_webp&q_80/assets/banner.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80/assets/banner2.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80/assets/3.jpeg',
-        '/nuxt-app/_ipx/f_webp&q_80&s_1200x400/assets/img.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80&s_1200x400/assets/img1.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80&s_1200x400/assets/img2.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80&s_421x180/assets/photo.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80&s_421x180//assets/photo1.jpg',
-        '/nuxt-app/_ipx/f_webp&q_80&s_421x180//assets/photo2.jpg',
+        '/_ipx/f_webp&q_80/assets/banner.jpg',
+        '/_ipx/f_webp&q_80/assets/banner2.jpg',
+        '/_ipx/f_webp&q_80/assets/3.jpeg',
+        '/_ipx/f_webp&q_80&s_1200x400/assets/img.jpg',
+        '/_ipx/f_webp&q_80&s_1200x400/assets/img1.jpg',
+        '/_ipx/f_webp&q_80&s_1200x400/assets/img2.jpg',
+        '/_ipx/f_webp&q_80&s_421x180/assets/photo.jpg',
+        '/_ipx/f_webp&q_80&s_421x180//assets/photo1.jpg',
+        '/_ipx/f_webp&q_80&s_421x180//assets/photo2.jpg',
         // ...其他图片
       ]
     }
