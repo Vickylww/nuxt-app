@@ -12,7 +12,7 @@
     :space-between="0"
     class="carousel"
   >
-    <swiper-slide v-for="(img, idx) in images" :key="idx" >
+    <swiper-slide v-for="(img, idx) in props.images" :key="idx" >
       <div    :aria-roledescription="'slide'"
         :aria-label="`第 ${idx + 1} 张，共 ${images.length} 张`">
       <NuxtImg :src="img" :alt="'图片' + (idx + 1)" class="slide-img" format="webp"  width="1200" height="400"/>
@@ -26,12 +26,19 @@
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+
+// const props = defineProps({
+//   images: {
+//     type: Array,
+//     default: () => ['/assets/img.jpg', '/assets/img1.jpg', '/assets/img2.jpg']
+//   }
+// })
 
 const props = withDefaults(defineProps<{
   images?: string[]

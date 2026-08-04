@@ -9,7 +9,7 @@
           transition: 'transform 0.5s ease'
         }"
       >
-        <li v-for="(img, idx) in images" :key="idx" class="carousel-slide"  role="Carousel"
+        <li v-for="(img, idx) in props.images" :key="idx" class="carousel-slide"  role="Carousel"
         aria-roledescription="slide"
         :aria-label="`第 ${idx + 1} 张，共 ${images.length} 张`"
         :aria-hidden="idx !== currentIndex ? 'true' : undefined">
@@ -42,16 +42,21 @@
 
 <script setup>
 import { ref } from 'vue'
+interface ImageItem {
+  src: string
+  alt: string
+}
 
 const props = withDefaults(defineProps<{
-  images?: string[]
+  images?: ImageItem[]  // ✅ 改成对象类型
 }>(), {
   images: () => [
-    {src:'/assets/img.jpg',alt:'首页横幅1'}, 
-    {src:'/assets/img1.jpg',alt:'首页横幅2'}, 
-    {src:'/assets/img2.jpg',alt:'首页横幅3'}, 
+    { src: '/assets/img.jpg', alt: '首页横幅1' },
+    { src: '/assets/img1.jpg', alt: '首页横幅2' },
+    { src: '/assets/img2.jpg', alt: '首页横幅3' },
   ]
 })
+
 
 
 const currentIndex = ref(0)
