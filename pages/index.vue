@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <HomeHero :images="safeBanners" :interval="5000" /> 
-    <LazySomeComponent >
+    <!-- <LazySomeComponent > -->
       <HomeServices />
       <HomeNewsSlider />
       <ImageCarousel />
       <Swiper  />
       <HomeArticles />
-    </LazySomeComponent>
+    <!-- </LazySomeComponent> -->
   </div>
 </template>
 
