@@ -34,7 +34,10 @@ export default defineNuxtConfig({
         '/_ipx/f_webp&q_80&s_1200x400/assets/img2.jpg',
         '/_ipx/f_webp&q_80&s_421x180/assets/photo.jpg',
         '/_ipx/f_webp&q_80&s_421x180/assets/photo1.jpg',
-        '/_ipx/f_webp&q_80&s_421x180/assets/photo2.jpg'
+        '/_ipx/f_webp&q_80&s_421x180/assets/photo2.jpg',
+        '/_ipx/f_webp&q_80&s_347x200/assets/img.jpg',
+        '/_ipx/f_webp&q_80&s_347x200/assets/img1.jpg',
+        '/_ipx/f_webp&q_80&s_347x200/assets/img2.jpg'
         
       ]
     }

@@ -32,18 +32,12 @@ import { Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import { usePublicUrl } from '../composables/usePublicUrl'
-defineProps({
-  images: {
-    type: Array,
-    default: () => [
-      usePublicUrl('/assets/img.jpg'),
-      usePublicUrl('/assets/img1.jpg'),
-      usePublicUrl('/assets/img2.jpg')
-    ]
-  }
-})
 
+const props = withDefaults(defineProps<{
+  images?: string[]
+}>(), {
+  images: () => ['/assets/img.jpg', '/assets/img1.jpg', '/assets/img2.jpg']
+})
 
 </script>
 
