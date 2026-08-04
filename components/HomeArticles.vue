@@ -47,7 +47,6 @@ const items = [
 .articles {
   background: #ffffff;
   padding: 80px 0;
-  container-type: inline-size;
 }
 .section-title {
   text-align: center;
@@ -60,22 +59,13 @@ const items = [
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-   gap: var(--service-card-gap);
-  justify-content: space-between;
-  gap: 30px;
   padding: 0 20px;
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
 }
-  @container (min-width: 800px) {
-      .container {
-          flex-direction: row;
-          flex-wrap: nowrap;
-      }
-  }
+
 .article-card {
-  flex-direction: column;
-    flex: 1 1 0%;
   background: #eee;
   border-radius: 8px;
   overflow: hidden;
@@ -85,11 +75,7 @@ const items = [
     box-shadow 0.3s;
   cursor: pointer;
 }
-  @container (max-width: 799px) {
-          .article-card {
-              flex: 1 1 auto;
-          }
-      }
+
 .article-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px #aaa;

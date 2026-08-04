@@ -35,8 +35,6 @@
         </div>
       </div>
     </div>
-    <!-- 右侧空白占位 -->
-    <div class="news-right-empty" aria-hidden="true" role="presentation"></div>
   </section>
 </template>
 
@@ -78,40 +76,27 @@ const next = () => {
 
 <style scoped>
 .news-slider-section {
-  display: flex;
   background-color: #c0392b; /* 红色背景平铺 */
   min-height: 500px;
   margin:0px;padding:0px;
+  container-type:inline-size;
 }
 
 /* 左侧固定宽度内容块 */
 .news-left-wrapper {
- width:100%;
- 
-  flex-shrink: 0;
+width:451px; margin-left:15%;
   background-color: #ffffff;
-  padding: 40px 20px;
+  padding: 40px 15px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
 }
 
-     @media (min-width:1200px) {
+     @container (max-width:600px) {
    
-     .news-left-wrapper{width:251px; margin-left:0px;}
+     .news-left-wrapper{width:323px; margin-left:5%;}
    }
-     @media (min-width:500px) {
-   
-     .news-left-wrapper{width:451px; margin-left:0px;}
-   }
-      @media (min-width:768px) {
-    .news-left-wrapper{width:451px;margin-left:15%;}
-   }
-/* 右侧空白 */
-.news-right-empty {
-  flex: 1;
-}
+
+
 
 .section-title {
   color: #c0392b;
