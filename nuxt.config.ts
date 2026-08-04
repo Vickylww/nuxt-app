@@ -14,7 +14,8 @@ export default defineNuxtConfig({
   },
   image: {
     // 默认使用 ipx 作为提供者（支持本地点压缩和转换）
-    provider: 'ipx',
+    provider: 'ipxStatic',
+    // provider: 'ipx',
     // 可选全局质量
     quality: 80,
     // 可选格式（如自动转 webp）
