@@ -42,18 +42,17 @@
 
 <script setup>
 import { ref } from 'vue'
-import { usePublicUrl } from '../composables/usePublicUrl'
 
-const props = defineProps({
-  images: {
-    type: Array,
-    default: () => [
-      { src: usePublicUrl('/assets/img.jpg'), alt: '首页横幅1' },
-  { src: usePublicUrl('/assets/img1.jpg'), alt: '远程图片' },
-  { src: usePublicUrl('/assets/img2.jpg'), alt: '首页横幅3' }
-    ]
-  }
+const props = withDefaults(defineProps<{
+  images?: string[]
+}>(), {
+  images: () => [
+    {src:'/assets/img.jpg',alt:'首页横幅1'}, 
+    {src:'/assets/img1.jpg',alt:'首页横幅2'}, 
+    {src:'/assets/img2.jpg',alt:'首页横幅3'}, 
+  ]
 })
+
 
 const currentIndex = ref(0)
 
