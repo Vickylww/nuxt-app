@@ -31,6 +31,7 @@
 | 部署 | GitHub Pages |
 | 性能 | @nuxt/image,  代码分包 |
 
+
 ## 本地运行
 
 确保你的开发环境已安装 Node.js (>= 20.x) 和 npm/pnpm。
@@ -58,3 +59,5 @@ pnpm dev
 ## 许可证
 
 本项目采用 [MIT License](LICENSE)。
+
+
