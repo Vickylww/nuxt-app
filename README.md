@@ -53,14 +53,15 @@ npm run dev
 # 或者
 pnpm dev
 
-启动后访问 http://localhost:3000。
+启动后访问 http://localhost:3000。 
+
+```
 
 ## 更多文档
 - [项目结构与架构设计](./docs/architecture.md)
 
 
 ## 许可证
-
 本项目采用 [MIT License](LICENSE)。
 
 
