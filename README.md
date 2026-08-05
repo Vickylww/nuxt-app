@@ -50,5 +50,11 @@ pnpm install
 
 # 4. 启动开发服务器
 npm run dev
+
 # 或者
 pnpm dev
+
+
+## 许可证
+
+MIT License
