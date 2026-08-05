@@ -31,8 +31,6 @@
 | 部署 | GitHub Pages |
 | 性能 | @nuxt/image,  代码分包 |
 
-- [项目结构与架构设计](./docs/architecture.md)
-
 ## 本地运行
 
 确保你的开发环境已安装 Node.js (>= 20.x) 和 npm/pnpm。
@@ -56,6 +54,10 @@ npm run dev
 pnpm dev
 
 启动后访问 http://localhost:3000。
+
+## 更多文档
+- [项目结构与架构设计](./docs/architecture.md)
+
 
 ## 许可证
 
