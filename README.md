@@ -31,6 +31,7 @@
 | 部署 | GitHub Pages |
 | 性能 | @nuxt/image,  代码分包 |
 
+- [项目结构与架构设计](./docs/architecture.md)
 
 ## 本地运行
 
