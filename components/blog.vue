@@ -3,9 +3,9 @@
     <div v-if="pending">加载中...</div>
     <div v-else-if="error">加载失败：{{ error.message }}</div>
     <ul v-else-if="articles && articles.length">
-      <li v-for="article in articles" :key="article.slug" :title="ccc == article.title">
+      <li v-for="article in articles" :key="article.slug" :title="article.title" :istrue="ccc == article.slug">
         <NuxtLink :to="`/blog/${article.slug}`">
-          <h2  :class="ccc == article.title ? 'active' : ''">{{ article.title }}</h2>
+          <h2  :class="ccc == article.slug ? 'active' : ''">{{ article.title }}</h2>
         </NuxtLink>
        
       </li>
@@ -15,18 +15,19 @@
 
 <script setup lang="ts">
 // 获取当前请求的 origin，拼接完整 API URL  ${origin}/nuxt-app
+import {ref,reactive} from 'vue'
 const { origin } = useRequestURL()
-const apiUrl = `/api/public-articles`
+// const apiUrl = `/api/public-articles`
+const apiUrl = `/api/articles`
 const route = useRoute()
 const { data: articles, pending, error } = await useAsyncData(
   'blog-list',
   () => $fetch(apiUrl)
 )
-let ccc= route.params.slug
-// 监听路由变化（可选）
-watch(() => route.path, (newPath) => {
-   ccc= newPath.split('/')[2]
-})
+
+let ccc= reactive(route.params.slug)
+
+
 </script>
 
 <style scoped>

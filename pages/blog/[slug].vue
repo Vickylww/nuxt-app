@@ -8,8 +8,9 @@
             <div v-else-if="error">加载失败：{{ error.message }}</div>
             <article  v-else-if="article">
                 <h1>{{ article.title  }}</h1>
-                <p class="meta">{{ article.createdAt  }}</p>
-                 <div class="content" v-html="article.html" />
+                <p class="meta"><small>{{ new Date(article.createdAt).toLocaleString() }}</small></p>
+                 <div class="content" v-html="renderedContent" />
+                 <!-- article.createdAt article.html 是从本地获取md 文件的字段 -->
             </article>
              <div v-else>文章不存在</div>
         </div>
@@ -25,16 +26,20 @@
 definePageMeta({
   layout: 'blog'
 })
-
+import { marked } from 'marked'; // 需要安装 marked：npm install marked
 
 const route = useRoute()
 
 
 const { data: article,pending, error } = await useAsyncData(
   `article-${route.params.slug}`,
-  () => $fetch(`/api/public-articles/${route.params.slug}`)
+  () => $fetch(`/api/articles/${route.params.slug}`)
 )
-
+// 将 Markdown 转成 HTML
+const renderedContent = computed(() => {
+  if (!article.value) return '';
+  return marked(article.value.content);
+});
 useHead({
   title: computed(() => article.value?.title || '文章'),
   meta: [

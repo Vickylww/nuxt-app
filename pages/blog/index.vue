@@ -6,7 +6,9 @@
 </template>
 
 <script setup lang="ts">
-
+definePageMeta({
+  layout: 'blog'
+})
 useHead({
   title: '博客',
 })

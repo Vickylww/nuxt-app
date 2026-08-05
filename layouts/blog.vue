@@ -3,7 +3,9 @@
     <!-- 博客专属导航栏，可与企业官网不同 -->
     <header class="blog-header">
       <nav>
-        <NuxtLink to="/" class="logo">企业官网</NuxtLink>
+        <NuxtLink to="/" class="logo" active-class="active">企业官网</NuxtLink>
+        <NuxtLink to="/blog" class="logo" active-class="active">博客文章</NuxtLink>
+        <NuxtLink to="/admin" class="logo" active-class="active">新增文章</NuxtLink>
       </nav>
     </header>
 
@@ -41,7 +43,10 @@
   text-decoration: none;
   color: #333;
 }
-
+.logo.active {
+  color: #c5a47e;
+ 
+}
 .blog-footer {
   margin-top: 40px;
   padding: 20px 0;

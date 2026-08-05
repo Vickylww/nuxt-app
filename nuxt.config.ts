@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   image: {
     // 默认使用 ipx 作为提供者（支持本地点压缩和转换）
     provider: 'ipxStatic',
-    // provider: 'ipx',
+    // provider: 'ipx',  //动态生成ipx图片功能，上线后需要放开，目前只为github pages 静态界面展示用 
     // 可选全局质量
     quality: 80,
     // 可选格式（如自动转 webp）

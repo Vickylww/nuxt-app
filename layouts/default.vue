@@ -5,7 +5,7 @@
       <NuxtLink  to="/news" class="nav-item" active-class="active">动态</NuxtLink >
       <NuxtLink  to="/adproduction" class="nav-item" active-class="active">广告制作</NuxtLink >
       <NuxtLink  to="/tasklist" class="nav-item" active-class="active">任务看板</NuxtLink >
-      <NuxtLink  to="/blog/hello-world" class="nav-item" active-class="active" exact-active-class="active">博客</NuxtLink >
+      <NuxtLink  to="/blog" class="nav-item" active-class="active" exact-active-class="active">博客</NuxtLink >
       <NuxtLink  to="/helpcenter" class="nav-item" active-class="active">帮助中心</NuxtLink >
     </span>
     <span class="nav-right">

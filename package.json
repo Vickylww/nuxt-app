@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.3",
     "ipx": "^3.1.1",
     "markdown-it": "^15.0.0",
+    "marked": "^18.0.9",
     "nuxt": "^3.16.0",
     "swiper": "^14.0.6"
   },
@@ -28,7 +29,7 @@
     "mozjpeg@7.1.1": true,
     "optipng-bin@7.0.1": true,
     "pngquant-bin@6.0.1": true,
-    "esbuild@0.14.54": true
+    "esbuild@0.28.1": true
   },
   "devDependencies": {
     "cross-env": "^10.1.0",
