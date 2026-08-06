@@ -1,5 +1,5 @@
 <template>
-  <div class=" blog-list"  >
+  <div class=" blog-list" style="min-height:360px;" >
     <h1>博客文章</h1>
     <blog/>
   </div>
