@@ -28,7 +28,7 @@
 | 服务端 | Nuxt Server API (Nitro) |
 | 样式 | CSS  |
 | 内容 | Markdown (自定义解析) |
-| 部署 | GitHub Pages |
+| 部署 | GitHub Pages(静态界面) |
 | 性能 | @nuxt/image,  代码分包 |
 
 ## 本地运行
