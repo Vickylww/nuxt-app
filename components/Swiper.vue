@@ -16,6 +16,7 @@
       <div    :aria-roledescription="'slide'"
         :aria-label="`第 ${idx + 1} 张，共 ${images.length} 张`">
       <NuxtImg :src="img" :alt="'图片' + (idx + 1)" class="slide-img" format="webp"  width="1200" height="400" loading="lazy"/>
+      <!-- loading="lazy 静态部署下需要删除 -->
       </div>
     </swiper-slide>
   </swiper>
