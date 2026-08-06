@@ -16,7 +16,7 @@
             }"
           >
             <li v-for="item in news" :key="item.id" class="news-card">
-              <NuxtImg :src="item.img" :alt="item.desc" class="news-img" format="webp"   width="421" height="180"/>
+              <NuxtImg :src="item.img" :alt="item.desc" class="news-img" format="webp"   width="421" height="180" loading="lazy"/>
               <h3>{{ item.title }}</h3>
               <p class="news-desc">{{ item.desc }}</p>
               <p class="news-date">{{ item.date }}</p>

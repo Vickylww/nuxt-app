@@ -13,7 +13,7 @@
         aria-roledescription="slide"
         :aria-label="`第 ${idx + 1} 张，共 ${images.length} 张`"
         :aria-hidden="idx !== currentIndex ? 'true' : undefined">
-          <NuxtImg :src="img.src" :alt="img.alt || `图片 ${idx + 1}`" format="webp"   width="1200" height="400"/>
+          <NuxtImg :src="img.src" :alt="img.alt || `图片 ${idx + 1}`" format="webp"   width="1200" height="400"  loading="lazy"/>
         </li>
       </ul>
     </div>

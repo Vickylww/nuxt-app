@@ -15,7 +15,7 @@
     <swiper-slide v-for="(img, idx) in props.images" :key="idx" >
       <div    :aria-roledescription="'slide'"
         :aria-label="`第 ${idx + 1} 张，共 ${images.length} 张`">
-      <NuxtImg :src="img" :alt="'图片' + (idx + 1)" class="slide-img" format="webp"  width="1200" height="400"/>
+      <NuxtImg :src="img" :alt="'图片' + (idx + 1)" class="slide-img" format="webp"  width="1200" height="400" loading="lazy"/>
       </div>
     </swiper-slide>
   </swiper>

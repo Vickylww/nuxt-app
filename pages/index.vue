@@ -2,13 +2,13 @@
   <div class="home">
     <HomeHero :images="safeBanners" :interval="5000" /> 
     <!-- 懒加载组件，上线后需要放开，目前只为github pages 静态界面展示用 -->
-    <!-- <LazySomeComponent > -->
+    <LazySomeComponent >
       <HomeServices />
       <HomeNewsSlider />
       <ImageCarousel />
       <Swiper  />
       <HomeArticles />
-    <!-- </LazySomeComponent> -->
+    </LazySomeComponent>
   </div>
 </template>
 
