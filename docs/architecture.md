@@ -2,7 +2,7 @@
 
 ```
 nuxt-app/
-├── articles/                # Markdown 文章
+├── articles/             # Markdown 文章
 ├── assets/               # 需要构建工具处理的资源
 ├── components/           # 公共组件
 ├── composables/          # 组合式函数
