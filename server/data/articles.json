@@ -10,5 +10,11 @@
     "title": "nuxt3-isr-guide",
     "content": "\n\n## 什么是 ISR？\n\n增量静态再生（Incremental Static Regeneration）是一种混合渲染策略：页面在首次请求时动态生成并缓存，后续请求\n直接返回缓存，同时后台静默更新缓存，确保内容最终一致。\n\n### 为什么选择 ISR？\n\n| 传统 SSR         | ISR                          |\n| ---------------- | ---------------------------- |\n| 每次请求都渲染   | 仅首次或缓存失效后渲染       |\n| 服务器压力大     | 大部分请求命中缓存，压力极低 |\n| 响应速度依赖后端 | 缓存命中时接近静态文件速度   |\n\n## 在 Nuxt3 中启用 ISR\n\n只需在 `nuxt.config.ts` 中配置：\n\n```typescript\nrouteRules: {\n  '/articles/**': { swr: 3600 }\n}",
     "createdAt": "2026-08-06T02:17:12.961Z"
+  },
+  {
+    "slug": "msh9fe22-performance-optimiza",
+    "title": "performance-optimization",
+    "content": "\n\n## 优化前的困境\n\n- 首屏加载超过 4 秒\n- 动态内容依赖客户端 API 调用\n- 图片未压缩，阻塞渲染\n\n## 优化策略一览\n\n1. **SSR + ISR**：所有首屏关键内容在服务端渲染，并启用增量静态再生。\n2. **图片优化**：使用 Nuxt Image 模块自动转换 WebP，响应式加载。\n3. **字体优化**：`font-display: swap` 确保文字快速可见。\n4. **代码分割**：路由懒加载，减少初始包体积。\n\n### 最终成果\n\n- LCP 降低 **55%**\n- TBT（总阻塞时间）减少 **70%**\n- 移动端评分从 62 提升至 98\n\n这些优化让官网在搜索引擎中的排名明显提升，用户跳出率下降 40%。",
+    "createdAt": "2026-08-06T08:34:35.114Z"
   }
 ]
