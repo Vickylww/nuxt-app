@@ -1,38 +1,20 @@
 [
   {
-    "slug": "msfmaifa-hello-word",
-    "title": "hello-world",
-    "content": "---\ntitle: \"hello-world\"\ndescription: \"这是第一篇测试文章，用于验证博客系统集成。\"\ncreatedAt: \"2025-06-01\"\n---\n\n## 欢迎使用全栈 CMS 博客\n\n这篇文章展示 **Markdown** 的常见语法。通过 Nuxt3 与 Nitro API，文章内容在服务端渲染为 HTML，页面速度极快。\n\n### 功能清单\n\n- 支持 **粗体**、*斜体* 和 ~~删除线~~\n- 自动生成锚点链接\n- 代码块高亮（需额外配置）\n\n```javascript\n// 示例代码\nconsole.log('ISR 让博客快如静态站点！')\n\n你可以直接复制上面内容，在 `D:\\test4\\nuxt-app\\articles\\` 下新建 `hello-world.md` 并粘贴保存。\n\n### 3. 验证文件已存在\n\n在终端执行：\n\n```bash\ndir articles\\hello-world.md",
-    "createdAt": "2026-08-05T04:59:10.151Z"
+    "slug": "msgvk55z-欢迎使用全栈-cms-博客",
+    "title": "欢迎使用全栈 CMS 博客",
+    "content": "\n\n## 欢迎使用全栈 CMS 博客\n\n这篇文章展示 **Markdown** 的常见语法。通过 Nuxt3 与 Nitro API，文章内容在服务端渲染为 HTML，页面速度极快。\n\n### 功能清单\n\n- 支持 **粗体**、*斜体* 和 ~~删除线~~\n- 自动生成锚点链接\n- 代码块高亮（需额外配置）\n\n### 什么是Nitro？\n\nNitro 是一个全栈服务器框架，兼容任何运行时和任何部署目标。\nNitro 为您提供生产就绪的服务器，具有文件系统路由、代码分割以及对存储、缓存和数据库的内置支持——所有这些都与运行时无关，并且可以部署在任何地方。\n\n\n在目录内创建服务器和 API 路由routes/。每个文件直接映射到一个 URL 路径，其余部分由 Nitro 处理——路由、代码分割和优化构建。\n您还可以通过创建文件来完全控制服务器条目server.ts。Nitro 的高级、运行时无关的方法允许您使用任何 HTTP 库，例如Elysia、h3或Hono。\n\n### 表现\n\nNitro 在构建时编译路由，无需运行时路由器。它只加载和执行处理每个传入请求所需的代码。这使其成为无服务器托管的理想选择，无论项目大小，启动时间都接近 0 毫秒。\n\n### 随时随地部署\n\n无需任何配置，即可将服务器构建到.output/与 Node.js、Bun、Deno 和众多托管平台（例如 Cloudflare Workers、Netlify、Vercel 等）兼容的优化文件夹中。无需更改任何代码，即可利用 ESR、ISR 和 SWR 等平台特性。\n服务器端渲染\n使用您喜爱的模板引擎渲染 HTML，或直接在服务器端使用 React、Vue 或 Svelte 等组件库。通过客户端水合实现完全通用的渲染。Nitro 提供基础架构和渐进式方法，助您达成目标。\n\n### 贮存\nNitro 内置了一个与运行时无关的键值存储层。它默认使用内存存储，但您可以连接 20 多种不同的驱动程序（FS、Redis、S3 等），将它们附加到不同的命名空间，并在不更改代码的情况下切换它们。\n\n### 缓存\nNitro 支持服务器路由和服务器函数的缓存，由服务器存储（通过cache命名空间）直接支持。\n\n### 数据库\nNitro 还内置了一个 SQL 数据库。它默认使用 SQLite，但您可以使用相同的 API 连接和查询 10 多个数据库（Postgres、MySQL、PGLite 等）。\n\n### 元框架基础\nNitro 可以作为构建您自己的元框架的基础。Nuxt、SolidStart 和 TanStack Start 等流行的框架都全部或部分地利用了 Nitro。\n\n### Vite整合\nNitro 可以作为插件与Vite无缝集成。如果您正在使用 Vite 构建前端应用程序，添加 Nitro 即可获得 API 路由、服务器端渲染和完整的生产服务器——所有这些都与 Vite 集成在一起vite build。\nvite.config.ts\n\nimport { defineConfig } from \"vite\";\nimport { nitro } from \"nitro/vite\";\n\nexport default defineConfig({\n  plugins: [nitro()],\n});\nNitro 可以vite build生成一个优化的.output/文件夹，其中包含您的前端和后端——随时可以部署到任何地方。",
+    "createdAt": "2026-08-06T02:06:22.248Z"
   },
   {
-    "slug": "msfml4jf-hello-world",
-    "title": "hello-world",
-    "content": "---\ntitle: \"hello-world\"\ndescription: \"这是第一篇测试文章，用于验证博客系统集成。\"\ncreatedAt: \"2025-06-01\"\n---\n\n## 欢迎使用全栈 CMS 博客\n\n这篇文章展示 **Markdown** 的常见语法。通过 Nuxt3 与 Nitro API，文章内容在服务端渲染为 HTML，页面速度极快。\n\n### 功能清单\n\n- 支持 **粗体**、*斜体* 和 ~~删除线~~\n- 自动生成锚点链接\n- 代码块高亮（需额外配置）\n\n```javascript\n// 示例代码\nconsole.log('ISR 让博客快如静态站点！')\n\n你可以直接复制上面内容，在 `D:\\test4\\nuxt-app\\articles\\` 下新建 `hello-world.md` 并粘贴保存。\n\n### 3. 验证文件已存在\n\n在终端执行：\n\n```bash\ndir articles\\hello-world.md",
-    "createdAt": "2026-08-05T05:07:25.379Z"
-  },
-  {
-    "slug": "msfmm1cz-hello-world",
-    "title": "hello-world",
-    "content": "---\ntitle: \"hello-world\"\ndescription: \"这是第一篇测试文章，用于验证博客系统集成。\"\ncreatedAt: \"2025-06-01\"\n---\n\n## 欢迎使用全栈 CMS 博客\n\n这篇文章展示 **Markdown** 的常见语法。通过 Nuxt3 与 Nitro API，文章内容在服务端渲染为 HTML，页面速度极快。\n\n### 功能清单\n\n- 支持 **粗体**、*斜体* 和 ~~删除线~~\n- 自动生成锚点链接\n- 代码块高亮（需额外配置）\n\n```javascript\n// 示例代码\nconsole.log('ISR 让博客快如静态站点！')\n\n你可以直接复制上面内容，在 `D:\\test4\\nuxt-app\\articles\\` 下新建 `hello-world.md` 并粘贴保存。\n\n### 3. 验证文件已存在\n\n在终端执行：\n\n```bash\ndir articles\\hello-world.md",
-    "createdAt": "2026-08-05T05:08:07.908Z"
-  },
-  {
-    "slug": "msfmmrcu-hello-wordl",
-    "title": "hello-world",
-    "content": "---\ntitle: \"hello-world\"\ndescription: \"这是第一篇测试文章，用于验证博客系统集成。\"\ncreatedAt: \"2025-06-01\"\n---\n\n## 欢迎使用全栈 CMS 博客\n\n这篇文章展示 **Markdown** 的常见语法。通过 Nuxt3 与 Nitro API，文章内容在服务端渲染为 HTML，页面速度极快。\n\n### 功能清单\n\n- 支持 **粗体**、*斜体* 和 ~~删除线~~\n- 自动生成锚点链接\n- 代码块高亮（需额外配置）\n\n```javascript\n// 示例代码\nconsole.log('ISR 让博客快如静态站点！')\n\n你可以直接复制上面内容，在 `D:\\test4\\nuxt-app\\articles\\` 下新建 `hello-world.md` 并粘贴保存。\n\n### 3. 验证文件已存在\n\n在终端执行：\n\n```bash\ndir articles\\hello-world.md",
-    "createdAt": "2026-08-05T05:08:41.598Z"
-  },
-  {
-    "slug": "msfmrbkh-nuxt3-isr-guide",
+    "slug": "msgvy39c-nuxt3-isr-guide",
     "title": "nuxt3-isr-guide",
-    "content": "\n---\n\n## 2. `articles/nuxt3-isr-guide.md`\n\n```markdown\n---\ntitle: \"Nuxt3 增量静态再生（ISR）完全指南\"\ndescription: \"深入理解 ISR 原理，如何在企业官网中实现动态内容的高速渲染。\"\ncreatedAt: \"2025-06-15\"\n---\n\n## 什么是 ISR？\n\n增量静态再生（Incremental Static Regeneration）是一种混合渲染策略：页面在首次请求时动态生成并缓存，后续请求直接返回缓存，同时后台静默更新缓存，确保内容最终一致。\n\n### 为什么选择 ISR？\n\n| 传统 SSR         | ISR                          |\n| ---------------- | ---------------------------- |\n| 每次请求都渲染   | 仅首次或缓存失效后渲染       |\n| 服务器压力大     | 大部分请求命中缓存，压力极低 |\n| 响应速度依赖后端 | 缓存命中时接近静态文件速度   |\n\n## 在 Nuxt3 中启用 ISR\n\n只需在 `nuxt.config.ts` 中配置：\n\n```typescript\nrouteRules: {\n  '/articles/**': { swr: 3600 }\n}",
-    "createdAt": "2026-08-05T05:12:14.418Z"
+    "content": "\n\n## 什么是 ISR？\n\n增量静态再生（Incremental Static Regeneration）是一种混合渲染策略：页面在首次请求时动态生成并缓存，后续请求\n直接返回缓存，同时后台静默更新缓存，确保内容最终一致。\n\n### 为什么选择 ISR？\n\n| 传统 SSR         | ISR                          |\n| ---------------- | ---------------------------- |\n| 每次请求都渲染   | 仅首次或缓存失效后渲染       |\n| 服务器压力大     | 大部分请求命中缓存，压力极低 |\n| 响应速度依赖后端 | 缓存命中时接近静态文件速度   |\n\n## 在 Nuxt3 中启用 ISR\n\n只需在 `nuxt.config.ts` 中配置：\n\n```typescript\nrouteRules: {\n  '/articles/**': { swr: 3600 }\n}",
+    "createdAt": "2026-08-06T02:17:12.961Z"
   },
   {
-    "slug": "msfmrwmy-performance-optimiza",
+    "slug": "msgvyrpj-performance-optimiza",
     "title": "performance-optimization",
-    "content": "\n---\n\n## 3. `articles/performance-optimization.md`\n\n```markdown\n---\ntitle: \"企业官网性能优化实战\"\ndescription: \"从 Lighthouse 评分 60 到 100，我们做了哪些关键优化。\"\ncreatedAt: \"2025-07-20\"\n---\n\n## 优化前的困境\n\n- 首屏加载超过 4 秒\n- 动态内容依赖客户端 API 调用\n- 图片未压缩，阻塞渲染\n\n## 优化策略一览\n\n1. **SSR + ISR**：所有首屏关键内容在服务端渲染，并启用增量静态再生。\n2. **图片优化**：使用 Nuxt Image 模块自动转换 WebP，响应式加载。\n3. **字体优化**：`font-display: swap` 确保文字快速可见。\n4. **代码分割**：路由懒加载，减少初始包体积。\n\n### 最终成果\n\n- LCP 降低 **55%**\n- TBT（总阻塞时间）减少 **70%**\n- 移动端评分从 62 提升至 98\n\n这些优化让官网在搜索引擎中的排名明显提升，用户跳出率下降 40%。",
-    "createdAt": "2026-08-05T05:12:41.722Z"
+    "content": "\n\n## 优化前的困境\n\n- 首屏加载超过 4 秒\n- 动态内容依赖客户端 API 调用\n- 图片未压缩，阻塞渲染\n\n## 优化策略一览\n\n1. **SSR + ISR**：所有首屏关键内容在服务端渲染，并启用增量静态再生。\n2. **图片优化**：使用 Nuxt Image 模块自动转换 WebP，响应式加载。\n3. **字体优化**：`font-display: swap` 确保文字快速可见。\n4. **代码分割**：路由懒加载，减少初始包体积。\n\n### 最终成果\n\n- LCP 降低 **55%**\n- TBT（总阻塞时间）减少 **70%**\n- 移动端评分从 62 提升至 98\n\n这些优化让官网在搜索引擎中的排名明显提升，用户跳出率下降 40%。",
+    "createdAt": "2026-08-06T02:17:44.648Z"
   }
 ]

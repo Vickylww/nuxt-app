@@ -1,18 +1,9 @@
 
----
-
-## 2. `articles/nuxt3-isr-guide.md`
-
-```markdown
----
-title: "Nuxt3 增量静态再生（ISR）完全指南"
-description: "深入理解 ISR 原理，如何在企业官网中实现动态内容的高速渲染。"
-createdAt: "2025-06-15"
----
 
 ## 什么是 ISR？
 
-增量静态再生（Incremental Static Regeneration）是一种混合渲染策略：页面在首次请求时动态生成并缓存，后续请求直接返回缓存，同时后台静默更新缓存，确保内容最终一致。
+增量静态再生（Incremental Static Regeneration）是一种混合渲染策略：页面在首次请求时动态生成并缓存，后续请求
+直接返回缓存，同时后台静默更新缓存，确保内容最终一致。
 
 ### 为什么选择 ISR？
 

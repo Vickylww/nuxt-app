@@ -1,14 +1,4 @@
 
----
-
-## 3. `articles/performance-optimization.md`
-
-```markdown
----
-title: "企业官网性能优化实战"
-description: "从 Lighthouse 评分 60 到 100，我们做了哪些关键优化。"
-createdAt: "2025-07-20"
----
 
 ## 优化前的困境
 

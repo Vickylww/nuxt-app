@@ -1,5 +1,5 @@
 <template>
-  <div class="page-container blog-list"  style="margin-top:60px;">
+  <div class=" blog-list"  >
     <h1>博客文章</h1>
     <blog/>
   </div>
